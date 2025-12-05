@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useSEO } from '@/composables/useSEO'
 
 // SEO Meta Tags
@@ -11,7 +10,6 @@ useSEO({
 })
 
 const route = useRoute()
-const router = useRouter()
 
 // Get payment details from query params if available
 const checkoutId = route.query.checkoutId as string | undefined
